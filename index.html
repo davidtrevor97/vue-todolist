@@ -12,8 +12,8 @@
       <input type="text" v-model="promptUser" placeholder="Cosa devo fare??">
       <button type="button" name="button" @click="newStuff()">SALVA</button>
       <ul class="todoItem">
-        <li v-for="object in nowList" >
-          <span>{{object.item}} </span>
+        <li v-for="(object,i) in nowList" >
+          <span>{{i+1}} {{object.stuff}} </span>
           <i class="fas fa-trash-alt" @click="cancelStuff()"></i>
         </li>
       </ul>

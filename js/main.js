@@ -2,23 +2,19 @@ const container = new Vue({
   el: ".container",
   data: {
     promptUser: "",
+    number: 0,
     nowList: [
       {
-        item: "ciaooo"
       },
     ]
   },
   methods: {
     newStuff(){
       this.nowList.push({
-      item:  this.promptUser,
+      stuff:  this.promptUser,
       })
+      console.log(this.promptUser)
       this.promptUser = ""
-    },
-    cancelStuff(){
-      this.nowList.splice({
-        item: this.promptUser,
-      })
     },
   },
 });
