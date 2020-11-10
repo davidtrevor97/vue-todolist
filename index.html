@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>TODO LIST</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>La mia lista delle cose da fare</h1>
+      <input type="text" v-model="promptUser" placeholder="Cosa devo fare??">
+      <button type="button" name="button" @click="newStuff()">SALVA</button>
+      <ul class="todoItem">
+        <li v-for="object in nowList" >
+          <span>{{object.item}} </span>
+          <i class="fas fa-trash-alt" @click="cancelStuff()"></i>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- JAVASCRIPT -->
+    <script type="text/javascript" src="./js/main.js" > </script>
+  </body>
+</html>
